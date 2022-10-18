@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Ticket from './components/Ticket/Ticket.jsx';
 import team from './data/team.js';
 

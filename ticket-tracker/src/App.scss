@@ -1,0 +1,10 @@
+@use "./assets/sass/variables" as *;
+
+body{
+    background-color: $color-primary;
+}
+
+h1{
+    color: $color-tertiary;
+    text-align: center;
+}
