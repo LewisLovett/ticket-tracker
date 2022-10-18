@@ -2,13 +2,18 @@ import "./Ticket.scss";
 import Counter from "../Counter/Counter";
 
 const Ticket = (props) => {
-    return(
+
+    const ticketListJSX = props.teamTickets.map((ticket) => (
         <>
-            <h1>Name</h1>
-            <h2>Role</h2>
-            <Counter/>
-        </>
-    )
+        <h1>{ticket.name}</h1>
+        <h2>{ticket.role}</h2>
+        <Counter/>
+    </>
+    ));
+
+    return(<>
+    {ticketListJSX}
+    </>)
 }
 
 export default Ticket;
