@@ -10,7 +10,10 @@ const Ticket = (props) => {
         setTicketCount(ticketCount+1);
     }
     const handleDecrement = () => {
-        setTicketCount(ticketCount-1);
+        if(ticketCount!==0){
+            setTicketCount(ticketCount-1);
+        }
+        
     }
     const ticketJSX =  (
         <div className="ticket">
