@@ -1,3 +1,4 @@
+import "./TicketContainer.scss";
 import { useState } from "react";
 import Ticket from '../Ticket/Ticket.jsx';
 const TicketContainer = (props) => {
@@ -22,11 +23,11 @@ const TicketContainer = (props) => {
         
     }
 
-    const roleDropdownJSX = (
-        teamArry.map((ticket) => (
-            <option value={ticket.role}>{ticket.role}</option>
-        ))
-    )
+    // const roleDropdownJSX = (
+    //     teamArry.map((ticket) => (
+    //         <option value={ticket.role}>{ticket.role}</option>
+    //     ))
+    // )
 
     
     const handleRoleChange = (event) =>{
@@ -45,8 +46,14 @@ const TicketContainer = (props) => {
     const ticketContainerJSX = (
         <>
         <input className='nameSearch' onInput={handleSearchInput}/>
-        <select name="roles" onChange={handleRoleChange}>
-            {roleDropdownJSX}
+        <select className="roleDropdown" name="roles" onChange={handleRoleChange}>
+            {/* {roleDropdownJSX} */}
+            <option value="Junior Software Developer">Junior Software Developer</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Senior Software Developer">Senior Software Developer</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Tester">Tester</option>
+            <option value="Hard Man">HardMan</option>
         </select>
         <div className="ticketContainer">
             {ticketListJSX}

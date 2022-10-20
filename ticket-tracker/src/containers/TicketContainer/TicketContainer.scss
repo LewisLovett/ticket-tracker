@@ -1,0 +1,10 @@
+@use "../../assets/sass/variables" as *;
+
+.nameSearch, .roleDropdown{
+    background-color: $color-secondary;
+    padding: 0 10px;
+    color: $color-primary;
+    font-size: 1.5em;
+    margin:  0 10px
+}
+
