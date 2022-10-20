@@ -1,13 +1,21 @@
 import logo from './logo.svg';
 import './App.scss';
-import Ticket from './components/Ticket/Ticket.jsx';
+import Ticket from './containers/Ticket/Ticket.jsx';
 import team from './data/team.js';
 
 function App() {
+  const ticketListJSX = team.map((ticket) => (
+    
+    <Ticket ticketName = {ticket.name} ticketRole = {ticket.role}/>
+));
+
+
   return (
     <div className="App">
       <h1>Ticket Tracker</h1>
-        <Ticket teamTickets={team}/>
+      <div className="ticketContainer">
+      {ticketListJSX}
+      </div>
     </div>
   );
 }

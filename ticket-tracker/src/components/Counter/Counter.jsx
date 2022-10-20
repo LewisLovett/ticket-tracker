@@ -1,13 +1,14 @@
 import "./Counter.scss";
 
 const Counter = (props) => {
+    const {count, handleIncrement, handleDecrement} = props
     return (
         <>
             <h3>Counter</h3>
             <div className="buttonContainer">
-            <button>-</button>
-            <div>0</div>
-            <button>+</button>
+            <button onClick={handleDecrement}>-</button>
+            <div>{count}</div>
+            <button onClick={handleIncrement}>+</button>
             </div>
         </>
     );
